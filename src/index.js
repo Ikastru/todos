@@ -4,11 +4,14 @@ import 'bulma/css/bulma.css';
 import { RouterProvider} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import router from './routes.js';
+import { UserProvider } from './UserContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );
 
